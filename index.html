@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Weather Page</title>
-</head>
-<body>
-    
+  </head>
+  <body>
+    <header>
+      <h1>Weather</h1>
+    </header>
+
+    <main>
+      <section class="container" id="search-section">
+        <input type="text" id="city-input" placeholder="Search for city" />
+        <button id="fetch-weather">Search</button>
+      </section>
+      <section class="result" id="weather-result">Hola</section>
+    </main>
+    <footer>
+      <p>&copy; Weather Page by Omar Ballesteros 2024</p>
+    </footer>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
