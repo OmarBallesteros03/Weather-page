@@ -60,7 +60,7 @@ document.getElementById("fetch-weather").addEventListener("click", async () => {
             </article>
             <article>
                 <p class="detail-label">Humidity</p>
-                <p class="detail-value>${humidity}%</p>
+                <p class="detail-value">${humidity}%</p>
             </article>
             <article>
                 <p class="detail-label">Wind</p>
@@ -68,7 +68,7 @@ document.getElementById("fetch-weather").addEventListener("click", async () => {
             </article>
             <article>
                 <p class="detail-label">Pressure</p>
-                <p class="detail-value">${pressure}hPa</p>
+                <p class="detail-value">${pressure} hPa</p>
             </article>
         </div>
     </section>`;
