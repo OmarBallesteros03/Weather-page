@@ -5,17 +5,11 @@
   font-family: "Varela Round", sans-serif;
 }
 
-html,
-body {
-  height: 100%;
-}
-
 body {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  margin: 0;
-  background: linear-gradient(#a2d6f4, #d5ebf7);
+  background: linear-gradient(#72c1f7, #a8d0f0);
 }
 
 header {
@@ -32,21 +26,36 @@ section {
 }
 
 .input {
-  padding-block: 5px;
+  padding-block: 8px;
   padding-inline: 16px;
   margin-bottom: 2rem;
   border-radius: 40px;
   font-size: large;
-  border-color: #95cbea;
+  border-color: #82bbdb;
   box-shadow: inset 2px 2px 4px #bbb;
+  width: 300px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #2f6aae;
+}
+
+.input-label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+  display: block;
+  font-weight: 600;
 }
 
 .button {
-  padding: 6px;
+  padding: 10px 20px;
   display: flex;
-  width: 180px;
-  background: #333;
-  color: #ffc759;
+  align-items: center;
+  width: 200px;
+  background: #ffc759;
+  color: #333;
   border-radius: 40px;
   box-shadow: 0px 5px 10px #bbb;
   justify-content: space-evenly;
@@ -58,7 +67,7 @@ section {
 
 .button:hover {
   transform: scale(1.1);
-  background-color: #000;
+  background-color: #ffb742;
 }
 
 .text {
@@ -74,5 +83,170 @@ footer {
   padding: 10px;
   background: #333;
   color: white;
-  padding: 10px;
+}
+
+.result {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.main-result {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: #1b2735;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 2rem;
+}
+
+.city-data {
+  text-align: left;
+  padding: 2rem;
+}
+
+.city-data h2 {
+  font-size: 32px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.city-data p {
+  margin-bottom: 2rem;
+  font-size: 14px;
+}
+
+.city-data p strong {
+  font-size: 28px;
+}
+
+/* Styling for the weather icon */
+.icon-container {
+  text-align: center;
+}
+
+.icon-container img {
+  width: 15vw;
+  height: auto;
+  max-width: 120px;
+}
+
+.icon-container figcaption {
+  font-size: 14px;
+  color: #ececec;
+}
+
+.details-result {
+  display: flex;
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #1b2735;
+  color: #ffffff;
+  border-radius: 10px;
+  margin: 2rem;
+}
+
+.details-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.details-header h2 {
+  font-size: 18px;
+  margin-bottom: 2rem;
+}
+
+.details-grid {
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap:30dvh;
+  row-gap: 30px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.detail-label {
+  font-size: 14px;
+  margin: 0;
+  color: #cccccc;
+}
+
+.detail-value {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  color: #ffffff;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For medium screens (e.g., tablets) */
+@media screen and (max-width: 768px) {
+  .main-result {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+  }
+
+  .details-result {
+    width: 90%;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
+
+/* For small screens (e.g., mobile phones) */
+@media screen and (max-width: 480px) {
+  .main-result {
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    padding-bottom: 2rem;
+  }
+
+  .city-data {
+    padding-bottom: 0;
+  }
+
+  .icon-container img {
+    width: 30vw;
+    max-width: 80px;
+  }
+
+  .details-result {
+    padding-top: 2rem;
+    width: 95%;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+    column-gap: 10px;
+  }
+
+  .input {
+    width: 100%;
+    font-size: medium;
+  }
+
+  .button {
+    width: 100%;
+  }
 }
